@@ -1,5 +1,4 @@
 # UnoVersion2.0
-Aquí tienes el README actualizado, incluyendo fallas del diseño inicial y mejoras implementadas de forma clara y tranquila.
 Juego UNO en Java
 Descripción
 Este proyecto es una implementación del juego de cartas UNO desarrollada en Java para ejecutarse en la consola.
