@@ -22,8 +22,6 @@ Fallas del diseño inicial
 Durante el desarrollo se detectaron algunos problemas en la primera versión del proyecto:
 1. Falta de la regla de decir UNO
 Cuando un jugador quedaba con una sola carta, el programa solo mostraba:
-Copiar código
-
 UNO!
 pero no permitía decidir si el jugador decía UNO ni aplicaba penalización si no lo hacía.
 2. Falta de penalización por no decir UNO
@@ -42,41 +40,29 @@ Mejoras implementadas
 Para solucionar estos problemas se realizaron varias mejoras en el diseño.
 1. Implementación de la regla UNO
 Se agregó una nueva variable en la clase Game:
-Copiar código
-
 private boolean jugadorDijoUNO = false;
 Esto permite registrar si el jugador decidió decir UNO o no cuando le queda una sola carta.
 2. Confirmación para decir UNO
 Cuando el jugador se queda con una carta, ahora el juego pregunta:
-Copiar código
-
 Tienes una carta. Deseas decir UNO? (s/n)
 Dependiendo de la respuesta:
 si responde s, el jugador dice UNO
 si responde n, el jugador no lo dice
 3. Penalización por no decir UNO
 Se agregó el método:
-Copiar código
-
 verificarPenalizacionUNO()
 Este método revisa si:
 el jugador tiene una sola carta
 y no dijo UNO
 Si ocurre esto, se aplica una penalización:
-Copiar código
-
 Penalizacion: robas dos cartas
 Esto hace que el juego sea más fiel a las reglas originales.
 4. Método para cambiar color
 Se creó un nuevo método para manejar el cambio de color de cartas comodín:
-Copiar código
-
 cambiarColor(Card carta, boolean esJugador)
 Este método tiene dos comportamientos:
 Si juega el jugador
 El jugador elige el color:
-Copiar código
-
 Elige nuevo color (rojo, azul, verde, amarillo)
 Si juega la computadora
 La computadora elige un color aleatoriamente.
